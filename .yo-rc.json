@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "chatbot",
+    "libraryId": "9c780b0c-f92a-4b1f-b7dd-159a8b2f4782",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "chatbot",
+    "solutionShortDescription": "chatbot description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
