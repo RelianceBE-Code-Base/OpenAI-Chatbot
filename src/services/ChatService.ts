@@ -13,32 +13,6 @@ async function invokePrompt(messages: {role:string, content:string}[]) : Promise
         new AzureKeyCredential(azure_openai_key)
     )
     
-    // const messages = [
-    //     { role: "system", content: "You are a helpful assistant. You will answer questions from users."},
-    //     { role: "user", content: "Tell me about Microsoft" }
-    // ]
-
-    //console.log(`Messages: ${messages.map((m) => m.content).join("\n")}`)
-
-    // const {choices} = await client.getChatCompletions(deployment_id,messages, {maxTokens: 1000})
-
-    // for (const choice of choices) {
-    //     console.log(choice.text);
-    //   }
-
-    // const events = await client.streamChatCompletions(deployment_id, messages, {maxTokens: 1000});
-    // for await (const event of events){
-    //     for(const choice of event.choices){
-    //         const delta = choice.delta?.content;
-    //         if (delta !== undefined){
-    //             //console.log(`Chatbot: ${delta}`)
-    //             //console.log(`${delta}`)
-    //             //return({role: "chatbot", content: `${delta}`})
-    //             //return(`${delta}`)
-    //             return(delta?.length)
-    //         }
-    //     }
-    // }
 
     const events = await client.getChatCompletions(deployment_id, messages, { maxTokens: 1000 });
 
